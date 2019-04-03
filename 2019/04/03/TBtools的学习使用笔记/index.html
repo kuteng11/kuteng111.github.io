@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="生物软件,">
 
 
 
@@ -98,13 +98,32 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="酸菜鱼的小博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/02/index.html">
+<meta name="description" content="::: hljs-center TBtools的学习使用笔记 1，根据simple biosequence viewer展示基因上的相关信息(2019/4/3) 这个工具实际上本来是来绘制一个基因家族上不同基因展示的信息。我看了作图的说明书在想是不是可以去展示一下一段基因的CpG岛呢？  看了群里要求的数据格式，动手去做很简单。可以展示一个多个片段都可以。  首先需要准备两个txt文件，一个文件用">
+<meta name="keywords" content="生物软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TBtools的学习使用笔记">
+<meta property="og:url" content="http://yoursite.com/2019/04/03/TBtools的学习使用笔记/index.html">
 <meta property="og:site_name" content="酸菜鱼的小博客">
+<meta property="og:description" content="::: hljs-center TBtools的学习使用笔记 1，根据simple biosequence viewer展示基因上的相关信息(2019/4/3) 这个工具实际上本来是来绘制一个基因家族上不同基因展示的信息。我看了作图的说明书在想是不是可以去展示一下一段基因的CpG岛呢？  看了群里要求的数据格式，动手去做很简单。可以展示一个多个片段都可以。  首先需要准备两个txt文件，一个文件用">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403104725830.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403104802420.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403104933176.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403105017321.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111020266.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111058378.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111256482.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111315309.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112334696.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112400454.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112425502.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112450055.png">
+<meta property="og:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112632964.png">
+<meta property="og:updated_time" content="2019-04-03T03:29:05.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="酸菜鱼的小博客">
+<meta name="twitter:title" content="TBtools的学习使用笔记">
+<meta name="twitter:description" content="::: hljs-center TBtools的学习使用笔记 1，根据simple biosequence viewer展示基因上的相关信息(2019/4/3) 这个工具实际上本来是来绘制一个基因家族上不同基因展示的信息。我看了作图的说明书在想是不是可以去展示一下一段基因的CpG岛呢？  看了群里要求的数据格式，动手去做很简单。可以展示一个多个片段都可以。  首先需要准备两个txt文件，一个文件用">
+<meta name="twitter:image" content="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403104725830.png">
 
 
 
@@ -134,7 +153,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/02/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/03/TBtools的学习使用笔记/">
 
 
 
@@ -156,7 +175,7 @@
 });
 tpwidget("show");</script>
 
-  <title>归档 | 酸菜鱼的小博客</title>
+  <title>TBtools的学习使用笔记 | 酸菜鱼的小博客</title>
   
 
 
@@ -175,7 +194,7 @@ tpwidget("show");</script>
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -281,142 +300,248 @@ tpwidget("show");</script>
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/03/TBtools的学习使用笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="酸菜鱼">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酸菜鱼的小博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">TBtools的学习使用笔记</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-03T10:39:05+08:00">
+                2019-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 11 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/生物/" itemprop="url" rel="index">
+                    <span itemprop="name">生物</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/04/03/TBtools的学习使用笔记/" class="leancloud_visitors" data-flag-title="TBtools的学习使用笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count">℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  456 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>::: hljs-center</p>
+<p>TBtools的学习使用笔记</p>
+<h1 id="1，根据simple-biosequence-viewer展示基因上的相关信息-2019-4-3"><a href="#1，根据simple-biosequence-viewer展示基因上的相关信息-2019-4-3" class="headerlink" title="1，根据simple biosequence viewer展示基因上的相关信息(2019/4/3)"></a>1，根据simple biosequence viewer展示基因上的相关信息(2019/4/3)</h1><blockquote>
+<p>这个工具实际上本来是来绘制一个基因家族上不同基因展示的信息。我看了作图的说明书在想是不是可以去展示一下一段基因的CpG岛呢？</p>
+</blockquote>
+<p>看了群里要求的数据格式，动手去做很简单。可以展示一个多个片段都可以。</p>
+<ol>
+<li>首先需要准备两个txt文件，一个文件用来放我们基因片段的长度。为了方便期间我们起名为CpGlong.txt。注意片段名称与长度之间的空格用Tab键。<br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403104725830.png" alt></li>
+<li>准备第二个文件，用来展示我们CpG的具体位点。我们CpGpoint.txt命名。（CpG位点就三个碱基我这里只是演示下数据不要纠结这个）<br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403104802420.png" alt></li>
+<li>剩下的，根据工具顺序导入文档，点击START就好了。方框地方调整图片一些参数。<br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403104933176.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403105017321.png" alt><br><br><h1 id="2，分组信息展示的热图-2019-4-3"><a href="#2，分组信息展示的热图-2019-4-3" class="headerlink" title="2，分组信息展示的热图(2019/4/3)"></a>2，分组信息展示的热图(2019/4/3)</h1><blockquote>
+<p>额，这个功能算是简单实用吧。我的导航上上面有个在线做热图的工具。但是我感觉吧这个本地工具更强大点。</p>
+</blockquote>
+</li>
+</ol>
+<p>这个功能我就不分步骤写了，简单。如果你只需要做一个简单的热图没太高要求，那么直接在输入框里输入对应格式数据就好了。之间的间隔用Tab键。其他更多参数自己更改成你想要的热图。有四种风格，挑一个你想用的。<br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111020266.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111058378.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111256482.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403111315309.png" alt><br>下面说下更多数据的热图。需要准备3个txt文档。一个放横坐标，一个纵坐标，一个表达量。<br>这个例子，横坐标展示样本，纵坐标展示基因。<br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112334696.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112400454.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112425502.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112450055.png" alt><br><img src="http://boke-1252039835.cos.ap-chengdu.myqcloud.com/TBtools%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/20190403112632964.png" alt></p>
+
+      
+    </div>
+    
+    
+    
+      <div>
         
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------看完了<i class="fa fa-paw"></i>干点什么呢-------------</div>
+    
+</div>
         
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/生物软件/" rel="tag"><i class="fa fa-tag"></i> 生物软件</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
         
 
         
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
           </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/28/用python画一朵玫瑰/" itemprop="url">
-              
-                <span itemprop="name">用python画一朵玫瑰 密码：123</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-28T17:03:58+08:00" content="2019-02-28">
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
-        
-        
-        
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/01/关于投稿参考文献格式问题/" rel="next" title="关于投稿参考文献格式问题">
+                <i class="fa fa-chevron-left"></i> 关于投稿参考文献格式问题
+              </a>
+            
+          </div>
 
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/28/关于生物软件ApE的学习/" itemprop="url">
-              
-                <span itemprop="name">关于生物软件ApE的学习</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-28T10:15:20+08:00" content="2019-02-28">
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/24/先发一篇开下张/" itemprop="url">
-              
-                <span itemprop="name">先发一篇开下张</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-24T19:11:45+08:00" content="2019-02-24">
-          02-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-    </div>
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -424,6 +549,15 @@ tpwidget("show");</script>
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MjkwOC8xOTQ1NA=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -446,8 +580,17 @@ tpwidget("show");</script>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -558,6 +701,22 @@ tpwidget("show");</script>
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1，根据simple-biosequence-viewer展示基因上的相关信息-2019-4-3"><span class="nav-number">1.</span> <span class="nav-text">1，根据simple biosequence viewer展示基因上的相关信息(2019/4/3)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2，分组信息展示的热图-2019-4-3"><span class="nav-number">2.</span> <span class="nav-text">2，分组信息展示的热图(2019/4/3)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -733,6 +892,10 @@ tpwidget("show");</script>
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -761,6 +924,17 @@ tpwidget("show");</script>
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
