@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Python爬虫（1）]]></title>
     <url>%2F2019%2F04%2F27%2FPython%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[爬虫入门（1）1； 首先安装需要用到的Python库requests_html 12341. from requests_html import HTMLSession2. session = HTMLSession()3. r = session.get('https://movie.douban.com/subject/1292052/')4. print(r.text) 这段代码就是导入这个库，然后获取豆瓣这个链接上面的内容 2； 提取网页中需要的内容这里我们用到浏览器中的CSS选择器功能，可以选取到网页上特定元素。 额，过程不想写。 这里例如我们想要得到网页中电影的名称。 3； 改进Python代码获取需要的电影名称1234561. from requests_html import HTMLSession2. session = HTMLSession()3. r = session.get('https://movie.douban.com/subject/1292052/')4. title = r.html.find('用你的选择器替换这里的内容', first=True) 5. #r.html.find() 接受一个 CSS 选择器（字符串形式）作为参数返回在网页中使用该选择器选中的内容。7. print(title.text)]]></content>
+    <content type="text"><![CDATA[爬虫入门request库（1）1； 首先安装需要用到的Python库requests_html 12341. from requests_html import HTMLSession2. session = HTMLSession()3. r = session.get('https://movie.douban.com/subject/1292052/')4. print(r.text) 这段代码就是导入这个库，然后获取豆瓣这个链接上面的内容 2； 提取网页中需要的内容这里我们用到浏览器中的CSS选择器功能，可以选取到网页上特定元素。 额，过程不想写。 这里例如我们想要得到网页中电影的名称。 3； 改进Python代码获取需要的电影名称1234561. from requests_html import HTMLSession2. session = HTMLSession()3. r = session.get('https://movie.douban.com/subject/1292052/')4. title = r.html.find('用你的选择器替换这里的内容', first=True) 5. #r.html.find() 接受一个 CSS 选择器（字符串形式）作为参数返回在网页中使用该选择器选中的内容。7. print(title.text)]]></content>
       <categories>
         <category>Python</category>
       </categories>
