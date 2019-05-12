@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[最近的想法]]></title>
+    <url>%2F2019%2F05%2F12%2F%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA%E7%AB%99%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[就是随便想说点东西吧。最近想的东西挺多的的，就写出来记录下吧！ 不知道最近怎么越发感觉孤独，说不上来的那种感觉。总之希望一切慢慢好起来吧。 过一阵子应该还有一篇文章要写。嗯，加油！这次一定要好好搞！ 然后关于 kuteng11.tk 这个导航站。本来最初时候这个域名注册时候弄错了只注册了三个月然后到期了。不光这样导航挂的那个主机也挂了，数据都没了。所以自己花了35买了一个相对稳定点的主机。然后重新搞起来，主要给自己用的。所以分类也就乱七八糟的，慢慢搞吧。反正没人用是吧。 然后是那个云盘感觉弄不下去了。非常简单但是不常用。如果有需要后期可能也搞起来吧。 Python基础学到第二周了，得坚持下去继续学。 嗯，差点忘记了。每周一定要看文献！看文献！看文献！重要的事情说三遍。 Python爬虫也在学，不过感觉可以放一放。 艾玛，最难受的英语。一定的学，死也得学！！！ 想找个人陪着一起出去旅游，不远一次短程感觉就好了！ R实战学习，emmm……暂时没计划^_^ 拍照，不知道拍啥。想拍妹子。—可能我真想找个女朋友谈个恋爱(#^.^#) 感觉自己暂时能把这些东西做完就不错了，希望能坚持哈！]]></content>
+      <tags>
+        <tag>随便说说</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python爬虫（1）]]></title>
     <url>%2F2019%2F04%2F27%2FPython%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89%2F</url>
     <content type="text"><![CDATA[爬虫入门request库（1）1； 首先安装需要用到的Python库requests_html 12341. from requests_html import HTMLSession2. session = HTMLSession()3. r = session.get('https://movie.douban.com/subject/1292052/')4. print(r.text) 这段代码就是导入这个库，然后获取豆瓣这个链接上面的内容 2； 提取网页中需要的内容这里我们用到浏览器中的CSS选择器功能，可以选取到网页上特定元素。 额，过程不想写。 这里例如我们想要得到网页中电影的名称。 3； 改进Python代码获取需要的电影名称1234561. from requests_html import HTMLSession2. session = HTMLSession()3. r = session.get('https://movie.douban.com/subject/1292052/')4. title = r.html.find('用你的选择器替换这里的内容', first=True) 5. #r.html.find() 接受一个 CSS 选择器（字符串形式）作为参数返回在网页中使用该选择器选中的内容。7. print(title.text)]]></content>
@@ -9,14 +17,6 @@
       </categories>
       <tags>
         <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[LncRNA GClnc1 Promotes Gastric Carcinogenesis and May Act as a Modular Scaffold of WDR5 and KAT2A Complexes to Specify the Histone Modification Pattern. Cancer Discov. 2016 Jul;6(7):784-801.]]></title>
-    <url>%2F2019%2F04%2F08%2FLncRNA-GClnc1-Promotes-Gastric-Carcinogenesis-and-May-Act-as-a-Modular-Scaffold-of-WDR5-and-KAT2A-Complexes-to-Specify-the-Histone-Modification-Pattern.%C2%A0Cancer-Discov.%C2%A02016-Jul%3B6(7)-784-801.%2F</url>
-    <content type="text"><![CDATA[额，从小张聊科研上看到了这篇文章阅读推送感觉不错，看着顺便记录下。 胃癌是全球第四大诊断类癌症，也是全球癌症相关死亡的第三大常见原因。由于胃癌进展的病理机制尚不完全清楚，因此需要更多的研究来发现和开发胃癌诊断和治疗的有效生物标志物和靶标。在本文中，作者发现并命名了一种新的lncRNA_GClnc1。它作为支架(Scaffold) lncRNA募集WDR5和KAT2A这两种蛋白质，并激活靶基因SOD2的转录，最终促进胃癌进展。-784-801./20190408111443376.png) 1. GClnc1的确定和临床意义 作者发现爱胃癌组织当中有8个明显改变的LncRNA, RT-PCR显示4种lncRNAs显着增加，2种显着减少，2种无明显变化。这些数据表明一组lncRNA在胃癌中异常表达。 生存曲线分析显示，lncRNA BC041951的高表达与这些患者的不良预后显着相关（Fig-1A）。此外，实时PCR显示只有BC041951表达从正常胃组织到IM（肠上皮化生），DYS（发育异常）和胃癌逐渐增加（Fig-1B）。 使用美国癌症联合委员会（AJCC）的预测作为标准，作者发现当使用BC041951和AJCC的组合时，预测误差最低（Fig-1C）。因此，作者专注于BC041951并将其命名为GClnc1。 接下来，作者发现GClnc1表达与病理分化，血管侵犯，肿瘤大小和AJCC分期呈正相关（Fig-1D）。 来自群组1的数据表明GClnc1表达是胃癌侵袭性的独立预测因子，具有显着的HR预测效果（Fig-1E）。在105个胃癌组织中的进一步结果显示GClnc1的表达高于邻近组织（Fig-1F），高水平的GClnc1表达与较差的存活率显着相关（Fig-1G），并且可以用作独立的预测因子（Fig-1H）。 作者随后发现GClnc1的长度约为2000 kb，不能编码蛋白质而且主要位于细胞核中。总之，GClnc1是一种新的lncRNA，在胃癌组织中高表达。 ++额，所以感觉做科研运气也是很重要啊，为啥他就能发现这个Lnc？前期工作筛选出着8个显著变化的Lnc，又刚好存在这么一个跟胃癌发展这么相关的一个基因。运气也是实力的一种。++2. GClnc1对胃癌的功能影响“作者主要做了哪些工作” 为了阐明GClnc1是否在胃癌肿瘤发生中起作用，作者进行了RNA测序（RNA-seq）分析以比较对照组和GClnc1敲减组的基因表达谱。作者发现了3944个显著改变的基因。基因组富集分析（GSEA）显示，在胃癌细胞中，细胞增殖，转移，化学耐药细胞中的上调基因和特异性特征基因与GClnc1下调呈负相关（Fig-2A 2B 2C 2D）。 作者在来自GEO的独立公共数据集中进行了GSEA分析，结果显示细胞增殖，细胞周期，癌症相关途径的遗传特征基因在高GClnc1表达的患者中富集（Fig-2E）。这些数据表明GClnc1可能是胃癌的重要调节剂。 为了验证GClnc1的功能，作者将GClnc1 siRNA转染到胃癌细胞系BGC823和MKN45中。结果显示敲除GClnc1显着损害BGC823细胞和MKN45细胞的增殖（Fig-3A）。敲除GClnc1显着降低BGC823肿瘤生长（Fig-3B 3C）和肿瘤重量（Fig-3D）。并且，敲除GClnc1使BGC823和MKN45细胞对5’-氟尿嘧啶（Fig-3E）和顺铂处理敏感（Fig-3F）。在侵袭测定中，结果显示GClnc1的下调显着降低了胃癌细胞的侵袭能力（Fig-3G）。用表达GClnc1shRNA的肿瘤细胞接种的小鼠具有更长的总存活时间（Fig-3H）。与对照组相比，注射GClnc1 shRNA后13周小鼠肺转移较少（Fig-3I）。这些数据有力地表明GClnc1可通过调节胃癌细胞增殖，转移和增加化疗耐药性来促进胃癌进展。- 找到并证明了这个Lnc与胃癌的发展之间存在着一定的关系。3. GClnc1的作用机制研究 为了探索GClnc1促进胃癌的机制，作者使用了RNA pull-down分析来鉴定细胞内GClnc1结合因子（Fig-4A）。 GClnc1下拉样本中有两个特定的条带。作者鉴定了94和101种潜在的结合蛋白（Fig-4B）。Western印迹显示仅WDR5和KAT2A特异性结合GClnc1（Fig-4C）。数据表明这两种蛋白质可能形成复合物以与GClnc1相互作用。 接下来，作者发现GClnc1的5’片段在进一步的pull-down测定中与WDR5和KAT2A形成相互作用（Fig-4D）。RIP结果显示GClnc1直接结合胃癌细胞中的WDR5和KAT2A（Fig-4E）。与IgG对照相比，作者在抗WDR5和抗KAT2A免疫沉淀物中检测到GClnc1的约5.5倍和4倍富集（Fig-4F 4G）。此外，作者观察到WDR5和KAT2A在胃癌细胞中相互作用（Fig-4H）。敲除GClnc1或RNase处理消除了WDR5和KAT2A之间的相互作用（Fig-4I）。因此，GClnc1对WDR5和KAT2A复合物相互作用很重要。 接下来，作者在BGC823细胞中进行了WDR5和KAT2A的ChIP-seq以确认GClnc1如何调节WDR5和KAT2A。 GClnc1 shRNA的转染表明两种组蛋白调节剂的结合区域中WDR5和KAT2A占据率降低（Fig-5A 5B）。进一步的分析表明，近20％的KAT2A占据基因（147个基因）也被WDR5占据，显示出显着的重叠（Fig-5C）。接下来，作者使用RNA-seq鉴定了受GClnc1调节的具有高表达的基因标记，。组合ChIP-seq和RNA-seq数据，作者获得了约120个基因。大部分受WDR5 / KATA2复合物调节的基因中被GClnc1的敲低所消除（Fig-5D）。当GClnc1下调时，整合的GSEA表明被抑制的基因显着富集（Fig-5E）。因此，敲除GClnc1会损害WDR5和KAT2A复合物的形成。 这些数据表明GClnc1可以作为该复合物的支架，从而控制其调节组蛋白修饰，基因表达和生物活性的能力。 基于ChIP-seq和RNA-seq数据，SOD2是WDR5 / KAT2A复合物的靶基因之一。作者发现SOD2和GClnc1表达之间的相关性最强（Fig-6A）。在组群1中的165个胃癌中也发现了SOD2和GClnc1之间的正相关性（Fig-6B）。并且GClnc1的DNA片段与SOD2基因的外显子和内含子的一部分重叠（Fig-6C）。实时PCR和Western印迹数据显示，当转染两种不同的GClnc1 siRNA时，SOD2表达显着降低（Fig-6D）。荧光素酶测定显示GClnc1的敲低损害了SOD2启动子的转录水平（Fig-6E）。 SOD2表达的敲减显着降低了由GClnc1诱导的胃癌细胞的增殖（Fig-6F）。 SOD2的下调也显着阻断了GClnc1诱导的细胞侵袭（Fig-6G）。因此，SOD2介导GClnc1在胃癌细胞中的调节功能。 RT-PCR显示WDR5或KAT2A的敲低显着阻断了GClnc1诱导的SOD2上调（Fig-7A）。 ChIP测定表明WDR5和KAT2A直接结合SOD2的启动子区域（Fig-7B）。敲除WDR5，KAT2A和GClnc1显着降低了它们与SOD2启动子的结合效率（Fig-7C）。众所周知，WDR5和KAT2A是能够识别H3K4和H3K9的蛋白质。 H3K4甲基化和H3K9乙酰化也可以调节SOD2的转录。作者在SOD2的相同启动子区域发现了H3K4三甲基化和H3K9乙酰化（Fig-7D）。敲除GClnc1，WDR5和KAT2A降低了H3K9乙酰化和H3K4甲基化水平（Fig-7E）。 ChIRP显示GClnc1直接结合SOD2启动子区域（Fig-7F）。 根据以上数据，如Fig-7G所示，作者得出结论，GClnc1可作为支架lncRNA募集WDR5和KAT2A，激活SOD2的转录过程，增加胃癌细胞的增殖和转移，最终促进胃癌进展。]]></content>
-      <tags>
-        <tag>文献阅读</tag>
       </tags>
   </entry>
   <entry>
